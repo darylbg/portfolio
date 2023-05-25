@@ -1,20 +1,81 @@
 * {
-    outline: 1px solid limegreen;
+    /* outline: 1px solid limegreen; */
 }
 
-@media screen  and (max-width: 768px) {
+.nav-container {
+    padding: 0 !important;
+}
+
+.nav-container-div {
+    padding: 0 !important;
+}
+
+nav {
+    padding-bottom: 0 !important;
+}
+
+.nav-item-1,
+.nav-item-2,
+.nav-item-3,
+.nav-item-4 {
+    border-bottom: 2px solid black;
+}
+
+.nav-item-1,
+.nav-item-2,
+.nav-item-3 {
+    margin-right: 10px;
+}
+
+.nav-item-2,
+.nav-item-3,
+.nav-item-4 {
+    margin-left: 10px; 
+}
+
+@media screen and (max-width: 768px) {
+    .nav-item-4,
+    .nav-item-1 {
+        margin: 0 10px 0 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-brand {
+        border-bottom: 2px solid black;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-flex-fill {
+        border-bottom: 2px solid black;
+        height: 41.6px;
+    }
+}
+
+.home {
+    height: 85vh;
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        border-right: 2px solid black;
+    }
+}
+
+/* @media screen  and (max-width: 768px) {
     .home {
         height: 95vh !important;
     }
 }
-
 
 @media screen  and (min-width: 768px) {
     .home-1,
     .home-2 {
         height: 95vh !important;
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
     .home-image,
