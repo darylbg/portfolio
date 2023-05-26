@@ -43,7 +43,7 @@ body {
 
 nav {
     padding-bottom: 0 !important;
-    
+    padding-top: 15px !important;
 }
 
 .navbar-brand {
@@ -73,7 +73,14 @@ nav {
     }
 }
 
-.nav-link {
+.nav-item-1 a {
+    color: var(--green);
+    font-family: 'Courier Prime', monospace;
+}
+
+.nav-item-2 a,
+.nav-item-3 a,
+.nav-item-4 a {
     color: var(--light-slate) !important;
     font-family: 'Courier Prime', monospace;
 }
@@ -102,12 +109,37 @@ nav {
 
 .home {
     height: 85vh;
-    padding-top: 20%;
+    padding-top: 15%;
+    position: relative;
 }
 
 @media screen and (min-width: 768px) {
     .home {
         border-right: 2px solid var(--green);
+    }
+
+    .home-image,
+    .home-1 ul {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex!important;
+        justify-content: flex-end !important;
+    }
+
+    .home-image,
+    .home-1 ul {
+        padding-left: 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home-image,
+    .home-1 ul {
+        padding-left: 25%;
     }
 }
 
@@ -115,14 +147,6 @@ nav {
     .home-image,
     .home-icons-ul {
         display: inline-block !important;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: flex!important;
-        /* flex-basis: auto; */
-        justify-content: flex-end !important;
     }
 }
 
@@ -142,7 +166,8 @@ nav {
     overflow: hidden;
     animation: 
                 typing 1.3s steps(13),
-                curser .4s step-end infinite alternate;
+                cursor-alt .4s step-end infinite alternate;
+                
 }
 
 .home-name-div h1 {
@@ -153,8 +178,9 @@ nav {
     visibility: hidden;
     animation: 
                 typing 1.7s steps(12),
-                curser .4s step-end infinite alternate;
+                cursor-alt .4s step-end infinite alternate;
                 animation-delay: 1.5s;
+                
 }
 
 .home-subtitle-div h3 {
@@ -165,7 +191,7 @@ nav {
     visibility: hidden;
     animation: 
                 typing 2.5s steps(25),
-                curser .4s step-end infinite;
+                cursor 1s step-end infinite;
                 animation-delay: 2.9s;
 }
 
@@ -173,9 +199,14 @@ nav {
     visibility: visible;
 }
 
+@keyframes cursor-alt {
+    from, to { border-color: var(--green);}
+    100% { border-color: white;}
+}
+
 @keyframes cursor {
-    from, to { border-color: transparent }
-    50% { border-color: var(--green) }
+    from, to { border-color: var(--slate)  }
+    50% { border-color: transparent }
 
 }
 
@@ -220,6 +251,54 @@ nav {
 .home-icons-ul .list-group-item i {
     padding-right: 20px;
     color: var(--green);
+}
+
+.email  {
+    height: 15px;
+    line-height: 10px;
+    width: fit-content !important;
+    position: absolute;
+    right: 0 !important;
+    bottom: 50%;
+    padding: 0 5px 0 5px !important;
+    transform: rotate(90deg);
+    margin-right: -82px;
+    background-color: var(--dark-navy);
+}
+
+@media screen and (max-width: 768px) {
+    .email {
+        visibility: hidden;
+    }
+
+    .arrow {
+        visibility: hidden;
+    }
+}
+
+.email a {
+    font-family: 'Courier Prime', monospace;
+    color: var(--green);
+    font-size: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.email a:hover {
+    color: var(--lightest-slate);
+}
+
+.arrow {
+    height: 25px;
+    width: 20px !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0 -13px 5px 0;
+    transform: rotate(45deg);
+    border-bottom: 2px solid var(--green);
+    border-right: 2px solid var(--green);
 }
 
 .section-title {
