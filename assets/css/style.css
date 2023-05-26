@@ -200,8 +200,12 @@ nav {
 }
 
 @keyframes cursor-alt {
-    from, to { border-color: var(--green);}
-    100% { border-color: white;}
+    from  { 
+        border-color: var(--green);
+    }
+    to { 
+        border-color: var(--dark-navy);
+    }
 }
 
 @keyframes cursor {
