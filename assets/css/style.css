@@ -126,18 +126,70 @@ nav {
     }
 }
 
-.home-2-intro {
-    color: var(--green);
-    font-family: 'Courier Prime', monospace;
+.home-intro-div,
+.home-name-div,
+.home-subtitle-div,
+.home-bio-div {
+    width: fit-content;
 }
 
-.home-2 h1 {
+.home-intro-div h6 {
+    color: var(--green);
+    font-family: 'Courier Prime', monospace;
+    border-right: 1px solid var(--green);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+                typing 1.3s steps(13),
+                curser .4s step-end infinite alternate;
+}
+
+.home-name-div h1 {
+    width: 100%;
+    white-space: nowrap;
+    border-right: 1px solid var(--lightest-slate);
+    overflow: hidden;
+    visibility: hidden;
+    animation: 
+                typing 1.7s steps(12),
+                curser .4s step-end infinite alternate;
+                animation-delay: 1.5s;
+}
+
+.home-subtitle-div h3 {
+    width: 100%;
+    white-space: nowrap;
+    border-right: 1px solid var(--slate);
+    overflow: hidden;
+    visibility: hidden;
+    animation: 
+                typing 2.5s steps(25),
+                curser .4s step-end infinite;
+                animation-delay: 2.9s;
+}
+
+.visible {
+    visibility: visible;
+}
+
+@keyframes cursor {
+    from, to { border-color: transparent }
+    50% { border-color: var(--green) }
+
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+.home-name-div h1 {
     color: var(--lightest-slate);
     font-size: 6vw;
     font-weight: 800;
 }
 
-.home-2 h3 {
+.home-subtitle-div h3 {
     color: var(--slate);
     font-size: 3.8vw;
 }
