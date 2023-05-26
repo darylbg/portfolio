@@ -160,25 +160,25 @@ nav {
 .home-intro-div h6 {
     color: var(--green);
     font-family: 'Courier Prime', monospace;
-    border-right: 1px solid var(--green);
+    /* border-right: 1px solid transparent; */
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     animation: 
                 typing 1.3s steps(13),
-                cursor-alt .4s step-end infinite alternate;
+                cursor-alt 530ms step-end 3;
                 
 }
 
 .home-name-div h1 {
     width: 100%;
     white-space: nowrap;
-    border-right: 1px solid var(--lightest-slate);
+    /* border-right: 1px solid var(--lightest-slate); */
     overflow: hidden;
     visibility: hidden;
     animation: 
                 typing 1.7s steps(12),
-                cursor-alt .4s step-end infinite alternate;
+                cursor-alt-2 530ms step-end 3;
                 animation-delay: 1.5s;
                 
 }
@@ -190,9 +190,9 @@ nav {
     overflow: hidden;
     visibility: hidden;
     animation: 
-                typing 2.5s steps(25),
-                cursor 1s step-end infinite;
-                animation-delay: 2.9s;
+                typing 2.8s steps(26),
+                cursor 530ms step-end infinite;
+                animation-delay: 3s;
 }
 
 .visible {
@@ -200,12 +200,13 @@ nav {
 }
 
 @keyframes cursor-alt {
-    from  { 
-        border-color: var(--green);
-    }
-    to { 
-        border-color: var(--dark-navy);
-    }
+    from, to { border-color: transparent; }
+    50% { border-right: 1px solid var(--green); }
+}
+
+@keyframes cursor-alt-2 {
+    from, to { border-color: transparent; }
+    50% { border-right: 1px solid var(--lightest-slate); }
 }
 
 @keyframes cursor {
@@ -216,6 +217,7 @@ nav {
 
 @keyframes typing {
     from { width: 0 }
+    to { width: 100% }
 }
 
 .home-name-div h1 {
@@ -314,4 +316,23 @@ nav {
 
 .section-title span {
     color: var(--lightest-slate);
+}
+
+.work-tabs button {
+    font-family: 'Courier Prime', monospace;
+    color: var(--light-slate);
+    border-radius: 0 !important;
+    border-left: 1px solid var(--light-slate);
+}
+
+.work-tabs button:hover {
+    color: var(--green);
+    background-color: var(--dark-slate) !important;
+    color: var(--green) !important;
+}
+
+.work-tabs .active {
+    background-color: var(--dark-slate) !important;
+    color: var(--green) !important;
+    border-left: 3px solid var(--green);
 }
