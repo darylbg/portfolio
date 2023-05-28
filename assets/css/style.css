@@ -327,12 +327,17 @@ nav {
 
 .work-tabs button:hover {
     color: var(--green);
-    background-color: var(--dark-slate) !important;
+    background-color: var(--light-navy) !important;
     color: var(--green) !important;
 }
 
 .work-tabs .active {
-    background-color: var(--dark-slate) !important;
+    background-color: var(--light-navy) !important;
     color: var(--green) !important;
     border-left: 3px solid var(--green);
+}
+
+.tab-content .tab-pane {
+    background-color: var(--light-navy);
+    color: var(--light-slate);
 }
