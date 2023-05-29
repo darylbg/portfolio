@@ -228,7 +228,7 @@ nav {
 
 .home-subtitle-div h3 {
     color: var(--slate);
-    font-size: 3.8vw;
+    font-size: 3.33vw;
 }
 
 .home-2-bio {
@@ -340,4 +340,21 @@ nav {
 .tab-content .tab-pane {
     background-color: var(--light-navy);
     color: var(--light-slate);
+}
+
+/* footer */
+
+.footer-icons a {
+    background-color: var(--dark-navy);
+    border: none;
+    color: var(--lightest-slate);
+}
+
+.footer-icons a:hover {
+    color: var(--green);
+    transform: translateY(-5px);
+}
+
+.footer-icons a i {
+    font-size: 22px;
 }
