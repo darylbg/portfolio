@@ -359,6 +359,11 @@ nav {
 }
 
 .fil0 {
+    fill: red !important;
+  }
+
+  #mail path {
     fill: red;
   }
+  
   
