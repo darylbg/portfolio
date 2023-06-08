@@ -247,15 +247,14 @@ nav {
     font-family: 'Courier Prime', monospace;
 }
 
-.home-icons-ul .list-group-item:hover {
-    transform: scale(1.2);
-    transform-origin: left center;
-    padding-left: 12px;
+.home-icons-ul .list-group-item:hover > .home-icon-span {
+    transform: translateY(25px); /* this effect needs fixing */
     color: var(--green);
 }
 
 .home-icons-ul .list-group-item svg {
     color: var(--green);
+    height: 17px;
 }
 
 .email  {
@@ -283,14 +282,14 @@ nav {
 
 .email a {
     font-family: 'Courier Prime', monospace;
-    color: var(--green);
+    color: var(--lightest-slate);
     font-size: 10px;
     text-decoration: none;
     letter-spacing: 2px;
 }
 
 .email a:hover {
-    color: var(--lightest-slate);
+    color: var(--green);
 }
 
 .arrow {
