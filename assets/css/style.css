@@ -340,6 +340,12 @@ nav {
     color: var(--light-slate);
 }
 
+/* about me */
+
+.about-text {
+    color: var(--slate);
+}
+
 /* footer */
 
 .footer-icons a {
