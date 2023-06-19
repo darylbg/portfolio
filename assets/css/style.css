@@ -32,6 +32,7 @@
 body {
     background-color: var(--dark-navy) !important;
     font-family: inter !important;
+    overflow-x: hidden;
 }
 /* navbar */
 
@@ -88,6 +89,14 @@ nav {
 
 .nav-item a span {
     color: var(--green);
+}
+
+.menu-toggle-icon {
+    color: var(--blue);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
 }
 
 /* home section content */
@@ -281,6 +290,12 @@ nav {
     color: var(--lightest-slate);
 }
 
+/* about section */
+
+.about {
+    margin-top: 100px !important;
+}
+
 .work-tabs button {
     font-family: 'Courier Prime', monospace;
     color: var(--light-slate);
@@ -339,6 +354,10 @@ nav {
 /* all media queries */
 
 @media screen and (max-width: 650px) {
+    .nav-container {
+        padding: 0 20px 0 20px !important;
+    }
+    
     .svg-image {
         height: 200px !important;
     }
@@ -352,6 +371,10 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 10px;
+    }
+    
     .nav-item-4,
     .nav-item-1 {
         margin: 0 10px 0 10px;
