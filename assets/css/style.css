@@ -15,7 +15,8 @@
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
-    --green: #64ffda;
+    /* 64ffda */
+    --green: #04d9ff;
     --green-tint: rgba(100,255,218,0.1);
     --pink: #f57dff;
     --blue: #57cbff;
@@ -32,6 +33,7 @@ body {
     background-color: var(--dark-navy) !important;
     font-family: inter !important;
 }
+/* navbar */
 
 .nav-container {
     padding: 0 !important;
@@ -66,12 +68,7 @@ nav {
     margin-left: 10px; 
 }
 
-@media screen and (max-width: 768px) {
-    .nav-item-4,
-    .nav-item-1 {
-        margin: 0 10px 0 10px;
-    }
-}
+
 
 .nav-item-1 a {
     color: var(--green);
@@ -93,25 +90,15 @@ nav {
     color: var(--green);
 }
 
-@media screen and (min-width: 768px) {
-    .navbar-brand {
-        border-bottom: 2px solid var(--green);
-        margin-right: 0 !important;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .nav-flex-fill {
-        border-bottom: 2px solid var(--green);
-        height: 41.6px;
-    }
-}
+/* home section content */
 
 .home {
     height: 85vh;
     padding-top: 15%;
     position: relative;
 }
+
+/* home page profile image */
 
 .home-image {
     position: relative;
@@ -124,47 +111,15 @@ nav {
     width: 100%;
     height: 100%;
     z-index: 1;
+    max-height: 350px;
 }
 
-@media screen and (min-width: 768px) {
-    .home {
-        border-right: 2px solid var(--green);
-    }
-
-    .home-image,
-    .svg-image,
-    .home-1 ul {
-        padding-left: 10%;
-    }
+.svg-image-background {
+    height: 200px;
+    max-height: 350px;
 }
 
-@media screen and (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: flex!important;
-        justify-content: flex-end !important;
-    }
-
-    .home-image,
-    .svg-image,
-    .home-1 ul {
-        padding-left: 20%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .home-image,
-    .svg-image,
-    .home-1 ul {
-        padding-left: 25%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .home-image,
-    .home-icons-ul {
-        display: inline-block !important;
-    }
-}
+/* home section name/subtitle/subheader */
 
 .home-intro-div,
 .home-name-div,
@@ -251,13 +206,15 @@ nav {
     color: var(--slate);
 }
 
+/* home section icons */
+
 .home-icons-ul {
     max-width: fit-content;
     padding-top: 20px;
 }
 
 .home-icons-ul .list-group-item {
-    background-color: var(--dark-navy) !important;
+    background-color: transparent;
     border: none;
     color: var(--slate);
     font-family: 'Courier Prime', monospace;
@@ -273,6 +230,8 @@ nav {
     height: 17px;
 }
 
+/* home section email on right border */
+
 .email  {
     height: 15px;
     line-height: 10px;
@@ -284,25 +243,6 @@ nav {
     transform: rotate(90deg);
     margin-right: -82px;
     background-color: var(--dark-navy);
-}
-
-@media screen and (max-width: 768px) {
-    .home-icons {
-        display: inline-block ;
-        height: 100%;
-    }
-
-    .home-icons-ul {
-        padding-top: 0;
-    }
-
-    .email {
-        visibility: hidden;
-    }
-
-    .arrow {
-        visibility: hidden;
-    }
 }
 
 .email a {
@@ -396,4 +336,107 @@ nav {
     fill: red;
   }
   
-  
+/* all media queries */
+
+@media screen and (max-width: 650px) {
+    .svg-image {
+        height: 200px !important;
+    }
+
+    .svg-image-background {
+        height: 200px !important;
+    }
+    .home-icons-ul .list-group-item {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-item-4,
+    .nav-item-1 {
+        margin: 0 10px 0 10px;
+    }
+
+    .svg-image {
+        height: 250px;
+    }
+
+    .svg-image-background {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-brand {
+        border-bottom: 2px solid var(--green);
+        margin-right: 0 !important;
+    }
+
+    .nav-flex-fill {
+        border-bottom: 2px solid var(--green);
+        height: 41.6px;
+    }
+
+    .home {
+        border-right: 2px solid var(--green);
+    }
+
+    .home-icons {
+        padding-left: 20%;
+    }
+
+    .home-image,
+    .svg-image,
+    .home-1 ul {
+        padding-left: 10%;
+    }
+
+    .home-2 {
+        padding-top: 35px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex!important;
+        justify-content: flex-end !important;
+    }
+
+    .home-image,
+    .svg-image,
+    .home-1 ul {
+        padding-left: 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home-image,
+    .svg-image,
+    .home-1 ul {
+        padding-left: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-image,
+    .home-icons-ul {
+        display: inline-block !important;
+    }
+
+    .home-icons {
+        display: inline-block ;
+        height: 100%;
+    }
+
+    .home-icons-ul {
+        padding-top: 0;
+    }
+
+    .email {
+        visibility: hidden;
+    }
+
+    .arrow {
+        visibility: hidden;
+    }
+}
